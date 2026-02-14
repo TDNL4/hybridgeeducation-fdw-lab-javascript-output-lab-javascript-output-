@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body> <label for="usrInput">Escribe aquí tu texto:</label>
+    <input type="text" id="usrInput" placeholder="Escribe tu texto...">
+
+    <button onclick="actualizarTexto()">Haz click aquí</button>
+
+    <p id="mensaje"></p>
+
+    <script>
+        function actualizarTexto() {
+            var textoEscrito = document.getElementById("usrInput").value;
+            document.getElementById("mensaje").innerHTML = textoEscrito;
+            document.getElementById("mensaje").innerHTML = "¡Texto actualizado con Javascript!";
+                }
+    </script>
+    
+</body>
+</html>
