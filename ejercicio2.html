@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+
+    <h2>Demostración de Output en Javascript</h2>
+
+    <button onclick="mostrarNombre()">Mostrar mi nombre</button>
+
+    <hr>
+
+    <input type="text" id="campoTexto" placeholder="Escribe algo aquí...">
+    <button onclick="actualizarTexto()">Actualizar Contenido</button>
+
+    <p id="parrafoVacio"></p>
+
+    <script>
+        // Mensaje en consola al cargar la página
+        console.log("La página se ha cargado correctamente.");
+
+        // Función para la alerta
+        function mostrarNombre() {
+            alert("Hola, mi nombre es Fernando Hiram Gonzalez");
+        }
+
+        // Función para actualizar el párrafo con confirmación
+        function actualizarTexto() {
+            // Obtenemos lo que se escribió
+            let contenido = document.getElementById("campoTexto").value;
+            
+            // Mostramos el texto del usuario + el mensaje de confirmación
+            document.getElementById("parrafoVacio").innerText = contenido + " - ¡Texto actualizado con Javascript!";
+        }
+    </script>
+
+</body>
+</html>
